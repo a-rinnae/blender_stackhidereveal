@@ -65,7 +65,7 @@ class stack_reveal(bpy.types.Operator):
                 continue
             
         if deleted_count > 0:
-            self.report({'WARNING'}, "Attempted to reveal an object that was either revealed by undo (Ctrl-Z) or deleted, skipping...")
+            self.report({'WARNING'}, "Attempted to reveal an object that was either revealed by undo (Ctrl-Z), manually revealed, deleted, or other unknown error, skipping...")
         else:
             self.report({'INFO'}, f"Revealed {num_objects_to_reveal} objects")
         return {'FINISHED'}
